@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# 模拟真实训练数据生成（不是加噪声，而是从固定逻辑函数+动态调整中取）
 # 每次尝试都通过 PPO 策略更新 boundary 节点，每轮的 modularity 增益是平均的
 
 np.random.seed(0)
