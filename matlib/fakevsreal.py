@@ -13,10 +13,8 @@ plt.rcParams.update({
 })
 
 
-# Metric names
 metrics = ['Modularity $Q$', 'Conductance $\Phi$', 'Temporal ARI']
 
-# Values for each dataset
 data = {
     'PolitiFact': {
         'fake': [0.617, 0.287, 0.758],
@@ -53,13 +51,10 @@ for idx, (dataset, values) in enumerate(data.items()):
         ax.set_ylabel('Metric Value')
     ax.set_ylim(0.2, 0.8)
 
-# ✅ 移除主标题
 # fig.suptitle('Structural Differences between Fake and Real News')
 
-# ✅ 将图例移至顶部
 fig.legend(['Fake', 'Real'], loc='upper center', ncol=2, bbox_to_anchor=(0.5, 1.01))
 
-# ✅ 上方预留空间
 plt.tight_layout(rect=[0, 0, 1, 0.95])
 plt.savefig("barplot_fake_vs_real_per_dataset.pdf", bbox_inches='tight')
 plt.show()
