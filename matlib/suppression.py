@@ -35,7 +35,7 @@ ax.bar(x + bar_width/2, suppressed_values, width=bar_width, label='Suppressed (w
 ax.set_ylabel('Score / Normalized Size')
 ax.set_xticks(x)
 ax.set_xticklabels(categories, rotation=0)
-# ax.set_ylim(0, 1.1)  # 上方留白
+# ax.set_ylim(0, 1.1)  
 # ax.grid(True, linestyle='--', alpha=0.4, axis='y')
 ax.legend()
 
