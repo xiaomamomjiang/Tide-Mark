@@ -4,12 +4,10 @@ import numpy as np
 # Snapshot indices
 t = np.arange(1, 6)
 
-# 假设我们选中 boundary user 的社区编号随时间的变化
 tidemark = [1, 1, 1, 2, 2]
 wo_rl = [1, 2, 3, 2, 3]
 wo_markov = [1, 3, 1, 3, 2]
 
-# 绘图
 plt.figure(figsize=(7, 4))
 plt.plot(t, tidemark, 'o-', label='TIDE-MARK', linewidth=2)
 plt.plot(t, wo_rl, 's--', label='w/o RL', linewidth=2)
