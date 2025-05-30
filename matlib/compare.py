@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.patches import Patch
 
-# 更新 Matplotlib 参数
 plt.rcParams.update({
     "font.size": 12,
     "axes.titlesize": 18,
@@ -12,12 +11,10 @@ plt.rcParams.update({
     "legend.fontsize": 12
 })
 
-# 设置方法、数据集、颜色
 methods = ['Static Louvain', 'TGN + Louvain', 'DySAT + Louvain', 'TIDE-MARK']
 datasets = ['PolitiFact', 'GossipCop', 'ReCOVery']
 colors = ['green', 'blue', 'orange']
 
-# 数据
 modularity_means = [[0.534, 0.511, 0.497],
                     [0.553, 0.548, 0.534],
                     [0.596, 0.568, 0.563],
@@ -51,7 +48,6 @@ runtime_cis = [[(0.89, 0.93), (0.86, 0.90), (0.93, 0.97)],
                [(3.55, 3.61), (3.42, 3.48), (3.63, 3.69)],
                [(2.40, 2.46), (2.32, 2.38), (2.45, 2.51)]]
 
-# 准备绘图
 x = np.arange(len(methods))
 width = 0.2
 fig, axs = plt.subplots(2, 2, figsize=(14, 8))
@@ -101,7 +97,6 @@ axs[3].set_ylabel("Seconds")
 axs[3].set_xticks(x)
 axs[3].set_xticklabels(methods, rotation=15)
 
-# 图例
 legend_elements = [Patch(facecolor=colors[i], label=datasets[i]) for i in range(len(datasets))]
 plt.tight_layout(rect=[0, 0, 1, 0.95])
 fig.legend(handles=legend_elements, loc='upper center', ncol=3, fontsize='medium', bbox_to_anchor=(0.5, 1.0))
