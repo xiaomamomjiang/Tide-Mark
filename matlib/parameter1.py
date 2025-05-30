@@ -11,15 +11,12 @@ plt.rcParams.update({
 })
 
 
-# 横坐标定义
 x_alpha = np.linspace(0.1, 1.0, 10)
 x_beta = np.linspace(0.1, 1.0, 10)
 x_k = np.linspace(5, 50, 10, dtype=int)
 x_eta = np.array([1e-4, 3e-4, 5e-4, 1e-3, 3e-3, 5e-3, 7e-3, 9e-3, 1e-2, 2e-2])
 
-# 数据略，为节省篇幅，此处假设所有相关字典变量已正确定义并可直接使用
 
-# 示例数据（仅保留结构，用户已有完整数据）
 mod_alpha = {
     "PolitiFact": np.array([0.591, 0.600, 0.615, 0.612, 0.607, 0.606, 0.599, 0.590, 0.582, 0.575]),
     "GossipCop": np.array([0.583, 0.590, 0.604, 0.601, 0.597, 0.595, 0.591, 0.583, 0.576, 0.570]),
@@ -64,7 +61,6 @@ ari_eta_ci = {
     "ReCOVery":  np.array([0.006, 0.006, 0.007, 0.007, 0.006, 0.006, 0.006, 0.006, 0.006, 0.007])
 }
 
-# 绘图
 fig, axs = plt.subplots(2, 2, figsize=(14, 10))
 datasets = ["PolitiFact", "GossipCop", "ReCOVery"]
 
@@ -101,7 +97,6 @@ axs[1, 1].set_ylabel('Temporal ARI')
 axs[1, 1].set_xscale('log')
 axs[1, 1].grid(True, linestyle='--', alpha=0.5)
 
-# 图例放在最顶部中央
 fig.legend(datasets, loc='upper center', ncol=3, fontsize=12, bbox_to_anchor=(0.5, 1.0))
 plt.tight_layout(rect=[0, 0.03, 1, 0.95])
 plt.savefig("parameter_sensitivity_by_dataset_top_legend.pdf")
