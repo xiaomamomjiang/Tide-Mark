@@ -1,15 +1,14 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# 通用设置建议
 plt.rcParams.update({
-    'font.size': 12,         # 字体大小
-    'axes.titlesize': 18,    # 子图标题
-    'axes.labelsize': 16,    # 坐标轴
+    'font.size': 12,         
+    'axes.titlesize': 18,   
+    'axes.labelsize': 16,    
     'legend.fontsize': 12,
     'xtick.labelsize': 16,
     'ytick.labelsize': 16,
-    'lines.linewidth': 2,    # 线宽
+    'lines.linewidth': 2,    
     'legend.frameon': False,
     'grid.alpha': 0.5,
 })
@@ -17,7 +16,7 @@ plt.rcParams.update({
 
 
 
-# 加载已保存的训练数据
+
 delta_q_log_full = np.load("delta_q_log_full.npy")
 delta_q_log_nomarkov = np.load("delta_q_log_nomarkov.npy")
 
